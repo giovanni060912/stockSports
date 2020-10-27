@@ -1,12 +1,14 @@
 {
-  "name": "develop",
-  "displayName": "develop",
   "expo": {
-    "name": "develop",
-    "slug": "develop",
-    "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+      "name": "NewBank",
+      "slug": "New-Bank",
+      "orientation": "portrait",
+       "icon": "./src/components/assets/money-bag.png",
+      
+      "splash": {
+         "image": "./src/components/assets/exchange.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#B7BEC4"
+      }
   }
 }
