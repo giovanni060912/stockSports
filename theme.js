@@ -1,40 +1,14 @@
-import { getRelativeSize } from "./src/utils"
+import { getRelativeSize } from "./src/utils";
 
 const colors = {
-  primaryLight: '#58E0EF',
-  primary: '#D2691E',
-  primaryDark: '#3B5F7F',
-  secundary: '#151938',
-  caution: '#ed271e',
-  default: '#2a333a',
-  whitePure: '#ffffff',
-  black: '#000000',
-  input: '#F5F7F7',
-  inputCancel: '#44c5ee',
-  greyLighter: '#EDF0F2',
-  greyLight: '#D2D7DB',
-  grey: '#B7BEC4',
-  greyDark: '#9CA6AE',
-  greyDarker: '#818D97',
-  softGreyLight: '#667480',
-  softGrey: '#55616C',
-  softGreyDark: '#444E57',
-  disabled: '#c8d1ef',
-  textError: '#EE2737',
-  textSuccess: '#46BC3C',
-  cardError: '#FDE3D9',
-  cardSuccess: '#EEFFED',
-  secureColor: '#f2feff',
-  textJobs: '#63cff0',
-  transparent: 'transparent',
-  yellowFix: '#ffd737',
-  greenFix: '#1cd154',
-  priceColorP: '#ecfcf2',
-  priceColorN: '#fff2be',
-  pending: '#FFCC00',
-  ScheduledColor: '#6558f5',
-  chartColorPrimary: '#7e7ef0',
-}
+  primaryLight: "#58E0EF",
+  primary: "#D2691E",
+  primaryDark: "#3B5F7F",
+  whitePure: "#ffffff",
+  input: "#F5F7F7",
+  greyDark: "#9CA6AE",
+  greyDarker: "#818D97",
+};
 const theme = {
   color: {
     general: { ...colors },
@@ -57,12 +31,7 @@ const theme = {
     display: getRelativeSize(34),
     title1: getRelativeSize(28),
     title2: getRelativeSize(22),
-    subtitle: getRelativeSize(20),
-    headline: getRelativeSize(17),
-    body: getRelativeSize(16),
-    label: getRelativeSize(14),
-    caption: getRelativeSize(12),
   },
-}
+};
 
-export default theme
+export default theme;
