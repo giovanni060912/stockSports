@@ -1,10 +1,13 @@
-# New-Bank
+# StockSports
 
-*When cloning the project pass the following commands in the terminal
+To start the first step is to clone the project and after cloned open the stockSport folder in the terminal and pass a yarn to install all the project's dependencies
 
-Yarn 
-Yarn add expo-cli
+# To Start
 
-*Done this pass the command expo start to run the project
+After performing the previous steps just pass the command expo start that the project will open normally then just read the qr code of the page that will be opened in the browser with the expo app and the app will be loaded
 
-expo start
+# For login
+
+Provisionally it will be a fixed value for both cpf and password
+CPF : 12345678900
+Password :123456
