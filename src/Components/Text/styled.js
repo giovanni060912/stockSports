@@ -2,7 +2,6 @@ import styled, { css } from "styled-components";
 import { getPercentageSizeWidth, getRelativeSize } from "../../utils";
 
 export const TextNew = styled.Text`
-  color: ${(g) => g.theme.color.general.whitePure};
   font-size: 20;
 
   ${({ mTop }) =>
@@ -16,12 +15,21 @@ export const TextNew = styled.Text`
     css`
       margin-bottom: ${mBottom};
     `}
-
-
-${({ color }) =>
-    color &&
+    ${({ mLeft }) =>
+    mLeft &&
     css`
-      color: ${(g) => g.theme.color.general.whitePure};
+      margin-left: ${mLeft};
+    `}
+    ${({ mRight }) =>
+    mRight &&
+    css`
+      margin-right: ${mRight};
+    `}
+
+${({ Bcolor }) =>
+    Bcolor &&
+    css`
+      background-color: ${(g) => g.theme.Bcolor[Bcolor]};
     `}
 
     ${({ width }) =>

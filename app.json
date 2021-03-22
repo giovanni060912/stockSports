@@ -1,14 +1,14 @@
 {
   "expo": {
-      "name": "NewBank",
-      "slug": "New-Bank",
+      "name": "Stock Sports",
+      "slug": "Stock Sports",
       "orientation": "portrait",
-       "icon": "./src/components/assets/money-bag.png",
-      
+      "icon": "./src/components/assets/football.png",
+
       "splash": {
-         "image": "./src/components/assets/exchange.png",
+         "image": "./src/components/assets/iconSplash1.png",
         "resizeMode": "contain",
-        "backgroundColor": "#B7BEC4"
+        "backgroundColor": "#1947e6"
       }
   }
 }

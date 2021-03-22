@@ -1,8 +1,8 @@
 import { getRelativeSize } from "./src/utils";
 
 const colors = {
-  primaryLight: "#58E0EF",
-  primary: "#D2691E",
+  primaryLight: "#ADD8E6",
+  primary: "#1947E6",
   primaryDark: "#3B5F7F",
   whitePure: "#ffffff",
   input: "#F5F7F7",

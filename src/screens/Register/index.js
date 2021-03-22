@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Button, View, TextInput, Text } from "react-native";
-import { Container, Input, TextWan } from "./styled";
+import React, { useState } from "react";
+import { Image } from "react-native";
+import { Container, Input } from "./styled";
 import ButtonPrimary from "../../Components/Button";
-import { Logo } from "../../Components/Img";
-import NewText from "../../Components/Text";
-import Navigation from "../../Components/navigation";
 
 const Register = ({ navigation }) => {
   const requestAlth = [{ name: "12345678900", password: "123456" }];
@@ -19,24 +16,23 @@ const Register = ({ navigation }) => {
 
   return (
     <Container>
-      <Logo />
-      <NewText width={90} size="title1" text="CPF" />
+      <Image source={require("../../Components/assets/iconSplash1.png")} />
       <Input
         onChangeText={(text) => {
           text.length > 10 ? setDocument(text) : null;
         }}
         placeholder="CPF"
-        mTop={15}
+        mTop={100}
         mBottom={20}
         keyboardType="numeric"
+        maxLength={11}
       />
 
-      <NewText width={90} size="title2" text="Senha" />
       <Input
         onChangeText={(text) => setValid(text)}
         placeholder="Senha"
         mTop={15}
-        mBottom={80}
+        mBottom={90}
         secureTextEntry={true}
         keyboardType="numeric"
         textContentType={"password"}
@@ -46,8 +42,9 @@ const Register = ({ navigation }) => {
         onPress={() => {
           handleLogin();
         }}
-        text="Próximo"
-        mTop={50}
+        text="Proximo"
+        mTop={100}
+        Bcolor
       />
     </Container>
   );

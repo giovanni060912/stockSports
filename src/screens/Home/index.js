@@ -1,55 +1,80 @@
 import React, { useState, useEffect } from "react";
-import { ScrollView, View } from "react-native";
-import { Container, ViewExtact, ResumeRow } from "./styled";
-import { Logo } from "../../Components/Img";
+import { Image, ScrollView } from "react-native";
+import { Container, ViewTimes } from "./styled";
 import NewText from "../../Components/Text";
 import Button from "../../Components/Button";
-import { arrayCredit, arrayDebit } from "../../Components/array";
+import { useNavigation } from "@react-navigation/native";
 
 const Home = ({ navigation }) => {
-  const [infoCard, setInfoCard] = useState(false);
+  const { goBack } = useNavigation();
   return (
-    <Container>
-      <Logo />
-      <NewText text="Seja Bem-vindo!" size="title1" width={90} mTop={10} />
-      <Button onPress={() => setInfoCard(false)} text="Crédito" mTop={20} />
-      <Button onPress={() => setInfoCard(true)} text="Débito" mTop={10} />
-      <NewText
-        text="Saldo disponivel   5.000R$"
-        size="title1"
-        width={90}
-        mTop={40}
-      />
-      <ScrollView>
-        <ViewExtact>
-          {!infoCard && (
-            <View>
-              {arrayCredit.map((item) => (
-                <ResumeRow>
-                  <NewText mTop={5} text={item.name} />
-                  <NewText text={"R$" + " " + item.price} />
-                </ResumeRow>
-              ))}
-            </View>
-          )}
-          {infoCard && (
-            <View>
-              {arrayDebit.map((item) => (
-                <ResumeRow>
-                  <NewText mTop={5} text={item.name} />
-                  <NewText text={"R$" + " " + item.price} />
-                </ResumeRow>
-              ))}
-            </View>
-          )}
-        </ViewExtact>
-      </ScrollView>
-      <Button
-        text="Detalhes"
-        mTop={20}
-        onPress={() => navigation.navigate("Details")}
-      />
-    </Container>
+    <ScrollView>
+      <Container>
+        <ViewTimes mTop={27}>
+          <Image
+            style={{ marginTop: 20, marginBottom: 20, marginLeft: 18 }}
+            source={require("../../Components/assets/atleticopr1.png")}
+          />
+          <NewText
+            mLeft={30}
+            width={50}
+            size="title1"
+            text="Atlético Paranaense."
+          />
+        </ViewTimes>
+        <ViewTimes mTop={27}>
+          <Image
+            style={{ marginTop: 20, marginBottom: 20, marginLeft: 18 }}
+            source={require("../../Components/assets/bahia1.png")}
+          />
+          <NewText mLeft={30} width={50} size="title1" text="Bahia" />
+        </ViewTimes>
+        <ViewTimes mTop={27}>
+          <Image
+            style={{ marginTop: 20, marginBottom: 20, marginLeft: 18 }}
+            source={require("../../Components/assets/botafogo1.png")}
+          />
+          <NewText mLeft={30} width={50} size="title1" text="Botafogo" />
+        </ViewTimes>
+        <ViewTimes mTop={27}>
+          <Image
+            style={{ marginTop: 20, marginBottom: 20, marginLeft: 18 }}
+            source={require("../../Components/assets/atleticogo1.png")}
+          />
+          <NewText
+            mLeft={30}
+            width={50}
+            size="title1"
+            text="Atlético Goianiense."
+          />
+        </ViewTimes>
+        <ViewTimes mTop={27}>
+          <Image
+            style={{ marginTop: 20, marginBottom: 20, marginLeft: 18 }}
+            source={require("../../Components/assets/bragantino1.png")}
+          />
+          <NewText mLeft={30} width={50} size="title1" text="Bragantino." />
+        </ViewTimes>
+        <ViewTimes mTop={27}>
+          <Image
+            style={{ marginTop: 20, marginBottom: 20, marginLeft: 18 }}
+            source={require("../../Components/assets/atleticomg1.png")}
+          />
+          <NewText
+            mLeft={30}
+            width={50}
+            size="title1"
+            text="Atlético Mineiro."
+          />
+        </ViewTimes>
+        <Button mTop={60} text="Voltar" onPress={() => goBack()} />
+        <Button
+          text="Detalhes"
+          mTop={20}
+          onPress={() => navigation.navigate("Details")}
+        />
+      </Container>
+    </ScrollView>
   );
 };
 
